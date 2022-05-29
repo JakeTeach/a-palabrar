@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+html {
+   font-size: 62.5%
+}
+.container {
+    width: 100%;
+    background-color: #EEF3D2;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 10rem repeat(4, 1fr) 30rem;
+    grid-template-areas: 
+    "header-container header-container header-container header-container header-container header-container"
+    "general-info general-info general-info general-info aside aside"
+    "general-info general-info general-info general-info aside aside"
+    "general-info general-info general-info general-info aside aside"
+    "questions questions questions questions aside aside"
+/*     "questions questions questions questions aside aside" */
+    "footer footer footer footer footer footer";
+}
+.header-container {
+    grid-area: header-container;
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem 0 2rem 0;
+    /* border-bottom: 10rem solid rgba(rgb(0, 0, 0, 1)); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo1 {
+    height: 8rem;
+}
+.title {
+    font-size: 4rem;
+    color: #78315C;
+}
+.nav {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 0.5rem;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+.link {
+    padding: 0.3rem;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    border: 0.2rem solid #78315c67;
+}
+.nav > a:hover {
+    background-color: #78315C;
+    color: aliceblue;
+}
+.general-info {
+    grid-area: general-info;
+    padding: 0.5rem;
+    margin: 0 0.8rem 0.8rem 0.8rem;
+    font-size: 2rem;
+}
+.img-container {
+    width: auto;
+    height: 60rem;
+    margin: 0 2rem 2rem 2rem;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+}
+.hopper {
+    width: auto;
+    max-height: 60rem;
+    border-radius: inherit;
+    object-fit:inherit;
+    object-position: bottom;
+}
+.info-container {
+    display: block;
+    width: 100%;
+    margin: 0.8rem;
+    padding: 0.5rem 5rem;
+    text-align: center;
+}
+.questions {
+    grid-area: questions;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+/* .title2 {
+    font-size: 3rem;
+    margin: 2rem auto;
+    padding: 0.5rem;
+} */
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card {
+    width: 23%;
+    height: 20rem;
+    overflow: scroll;
+    padding: 0 1rem;
+    text-align: justify;
+}
+.aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    padding: 0.8rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.aside-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.munch {
+    width: 80%;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 2rem;
+}
+.text {
+    margin-bottom: 2rem;
+}
+.aside-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow:hidden;
+    margin-bottom: 2rem;
+}
+.profs {
+    font-size: 2.5rem;
+    margin: 1.5rem auto 1.5rem;
+    border: 0.3rem solid #78315c67;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+.profs:hover {
+    background-color: #78315C;
+    color:#EEF3D2;
+}
+.info-slider {
+    margin: 1.2rem;
+    width: 130px;
+    text-align:start;
+    border: 0.3rem solid #78315c67;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    transform: translateX(0);
+    animation: info-slider 30s infinite;
+}
+.aside-3 {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    text-align:justify;
+}
+.footer {
+    grid-area: footer;
+    background-image: url(./edward-hopper-h.jpg);
+    background-size: center;
+}
+.title-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.title-social > h3 {
+    font-size: 2.5rem;
+    color: #78315C;
+}
+.sm-icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+@keyframes info-slider {
+      0% {
+        transform: translateX(0);
+      }
+      10% {
+        transform: translateX(-50%);
+      }
+      20% {
+        transform: translateX(-150%);
+      }
+      25% {
+        transform: translateX(-250%);
+      }
+      40% {
+        transform: translateX(-350%);
+      }
+      50% {
+        transform: translateX(-450%);
+      }
+      60% {
+        transform: translateX(-550%);
+      }
+      70% {
+        transform: translateX(-650%);
+      }
+      80% {
+        transform: translateX(-750%);
+      }
+      90% {
+        transform: translateX(-880%);
+      }
+      95% {
+          transform: translateX(-500%);
+      }
+      97% {
+        transform: translateX(-300%);
+    }
+      100% {
+        transform: translateX(0);
+      }
+  }
